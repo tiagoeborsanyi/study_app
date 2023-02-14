@@ -10,6 +10,8 @@ class TaskDay extends StatefulWidget {
 
 class _TaskDayState extends State<TaskDay> {
   String selectedDay = '19';
+  int selectIndexCards = 1;
+  int tamanho = cardTaskDay[1]['cards'].length;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,6 +69,8 @@ class _TaskDayState extends State<TaskDay> {
                     onTap: () {
                       setState(() {
                         selectedDay = cardTaskDay[index]['day'];
+                        selectIndexCards = index;
+                        tamanho = cardTaskDay[index]['cards'].length;
                       });
                     },
                     child: Container(
@@ -98,6 +102,34 @@ class _TaskDayState extends State<TaskDay> {
                     ),
                   );
                 },
+              ),
+            ),
+            const SizedBox(height: 24),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: const [
+                Text(
+                  '+ Add Task',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 24),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: List.generate(tamanho, (index) {
+                    return Row(
+                      children: [
+                        Text(
+                          cardTaskDay[selectIndexCards]['cards'][index]['hour'],
+                        ),
+                      ],
+                    );
+                  }),
+                ),
               ),
             ),
           ],
