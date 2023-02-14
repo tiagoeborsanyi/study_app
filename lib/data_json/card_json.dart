@@ -22,3 +22,68 @@ const List cardList = [
     'icon': Icons.mobile_friendly_outlined,
   }
 ];
+
+const List cardTaskDay = [
+  {
+    'day': '18',
+    'cards': [
+      {
+        'hour': '13:00',
+        'icon': Icons.sports_baseball_outlined,
+        'title': 'Dribble',
+        'dificult': 'High',
+        'text': 'Daily UI Chaliange',
+        'check': true,
+        'color': Colors.lightBlue,
+      }
+    ]
+  },
+  {
+    'day': '19',
+    'cards': [
+      {
+        'hour': '13:00',
+        'icon': Icons.sports_baseball_outlined,
+        'title': 'Dribble',
+        'dificult': 'High',
+        'text': 'Daily UI Chaliange',
+        'check': true,
+        'color': Colors.lightGreen,
+      },
+      {
+        'hour': '15:00',
+        'icon': Icons.person_pin_outlined,
+        'title': 'Meeting',
+        'dificult': 'Low',
+        'text': 'Alguma atividade do dia',
+        'check': false,
+        'color': Colors.deepOrange,
+      },
+      {
+        'hour': '18:00',
+        'icon': Icons.sports_basketball_outlined,
+        'title': 'Fun Day',
+        'dificult': 'Normal',
+        'text': 'JKogar Basquete',
+        'check': false,
+        'color': Colors.pink
+      }
+    ]
+  },
+  {'day': '20', 'cards': []},
+  {'day': '21', 'cards': []},
+  {
+    'day': '22',
+    'cards': [
+      {
+        'hour': '18:00',
+        'icon': Icons.sports_basketball_outlined,
+        'title': 'Fun Day',
+        'dificult': 'Normal',
+        'text': 'JKogar Basquete',
+        'check': true,
+        'color': Colors.pink
+      }
+    ]
+  },
+];
