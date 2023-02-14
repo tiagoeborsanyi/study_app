@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_app_1/pages/task_day.dart';
 
 import 'home.dart';
 
@@ -73,15 +74,7 @@ class _RootPageState extends State<RootPage> {
       index: pageIndex,
       children: const [
         Home(),
-        Center(
-          child: Text(
-            "CALENDAR",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
+        TaskDay(),
         Center(
           child: Text(
             "CHAT",
